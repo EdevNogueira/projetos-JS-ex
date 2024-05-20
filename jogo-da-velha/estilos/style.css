@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex; /*new*/
+    flex-direction: column; /*new*/
+    width: 100vw;
+    height: 100vh;
+    background-color: #f0f0f0;
+    align-items: center; /*new*/
+    justify-content: center; /*new*/
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+div.qmaior {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+}
+
+div.quadrante {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #000;
+    background-color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#restart {
+    margin-top: 20px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+#restart:hover {
+    background-color: lightgray;
+}
