@@ -7,13 +7,13 @@
 }
 
 body {
-    display: flex; /*new*/
-    flex-direction: column; /*new*/
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
     width: 100vw;
     height: 100vh;
     background-color: #f0f0f0;
-    align-items: center; /*new*/
-    justify-content: center; /*new*/
 }
 
 h1 {
@@ -41,8 +41,10 @@ div.quadrante {
     cursor: pointer;
     font-size: 16px;
     border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #restart:hover {
-    background-color: lightgray;
+    background-color: rgb(236, 235, 235);
+    color: rgb(247, 44, 37);
 }
