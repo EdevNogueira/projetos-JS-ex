@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação DOM</title>
+</head>
+<body>
+    <button id="botao">Clique aqui</button>
+    <p id="mensagem"></p>
+
+    <script>
+        const botao = document.getElementById('botao');
+        const paragrafo = document.getElementById('mensagem');
+
+        botao.addEventListener('click', () => {
+            paragrafo.textContent = "Você clicou no botão!";
+        });
+    </script>
+</body>
+</html>

@@ -50,3 +50,24 @@ let percent = num * 5/100;
 let reajuste = num + percent;
 
 console.log(reajuste);*/ // EX-06
+
+/*const triploNum = (numero) => {
+    return numero * 3 ;
+}
+
+let num = 3
+
+console.log('O triplo de', num, 'é', triploNum(num));*/ //EX-GPT-01
+
+/*const contarImpares = () => {
+    let contador = 0;
+    for (let i = 1; i <= 20; i++) {
+        if (i % 2 !== 0) {
+            contador++;
+        }
+    }
+    return contador;
+}
+
+console.log('O número de ímpares entre 1 a 20 é', contarImpares());*/ //EX-GPT-02
+
