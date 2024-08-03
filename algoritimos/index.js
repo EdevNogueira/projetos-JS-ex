@@ -51,6 +51,22 @@ let reajuste = num + percent;
 
 console.log(reajuste);*/ // EX-06
 
+/*let A = 7;
+let B = 5;
+let vala = A > B;
+let valb = A > B;
+let val = true;
+
+const valorReal = () => {
+    if (val === vala || valb) {
+        console.log('Ambos os valores são Verdadeiro ou Falso');
+    } else {
+        console.log('Ambos são Falsos');
+    }
+}
+
+valorReal(); */ //EX-07
+
 /*const triploNum = (numero) => {
     return numero * 3 ;
 }
