@@ -87,3 +87,74 @@ console.log('O triplo de', num, 'é', triploNum(num));*/ //EX-GPT-01
 
 console.log('O número de ímpares entre 1 a 20 é', contarImpares());*/ //EX-GPT-02
 
+/*let nums = [1, 2, 3, 4, 5];
+
+const somaNums = () => {
+    let soma = 0;
+
+    for (let i = 0; i < nums.length; i++) {
+        soma = soma + nums[i];
+        console.log(soma);
+    }
+    return soma;
+}
+
+console.log('A soma de todos os elementos é:', somaNums());*/ //EX-GPT-03 Eu dificultei este
+
+//OBJETOS//
+
+/*let carro = {
+    marca: "Honda",
+    modelo: "Civic",
+    ano: 2014,
+
+    exibirInfo: function() {
+        console.log(`Carro: ${this.marca} ${this.modelo}, Ano: ${this.ano}`);
+    }
+}
+console.log(carro);
+
+carro.exibirInfo(); */ //EX-GPT-04 não consegui entender o que fazer para exibir um método (exibirInfo). Não sabia desse "this"
+
+//DESAFIO AVANÇADO - ARRAYS AND OBJECTS
+
+let aluno01 = {
+    nome: "Italo",
+    nota1: 9,
+    nota2: 9
+};
+
+let aluno02 = {
+    nome: "Lucas",
+    nota1: 8,
+    nota2: 8
+}
+
+let aluno03 = {
+    nome: "Edilson",
+    nota1: 8,
+    nota2: 9
+}
+
+let aluno04 = {
+    nome: "Gustavo",
+    nota1: 9,
+    nota2: 10
+}
+
+let alunos = [aluno01, aluno02, aluno03, aluno04];
+
+const mediaAluno = () => {
+    
+    for (let i = 0; i < alunos.length; i++) {
+        alunos[i].media = (alunos[i].nota1 + alunos[i].nota2) / 2;
+    };
+
+    alunos.sort((a, b) => b.media - a.media);
+    
+    for (let i = 0; i < alunos.length; i++) { 
+        console.log(`Aluno: ${alunos[i].nome}, Média: ${alunos[i].media}`);
+    };
+};
+mediaAluno();
+console.log(aluno04); //ESQUEÇA TUDOOOOOOOOO
