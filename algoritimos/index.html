@@ -6,16 +6,35 @@
     <title>Manipulação DOM</title>
 </head>
 <body>
-    <button id="botao">Clique aqui</button>
-    <p id="mensagem"></p>
+    <button id="botaozao">Clique no botão</button>
+    <p id="paragrafo"></p>
 
     <script>
-        const botao = document.getElementById('botao');
-        const paragrafo = document.getElementById('mensagem');
+        let botao = document.getElementById('botaozao');
+        let texto = document.getElementById('paragrafo');
+        let turno = true;
 
         botao.addEventListener('click', () => {
-            paragrafo.textContent = "Você clicou no botão!";
+            if (turno == true) {
+                turno = false;
+                texto.textContent = "Você clicou no botão!";
+                return
+            } else {
+                texto.textContent = "Você clicou novamente";
+                turno = true;
+            };
         });
+        /*Resolução do ChatGPT:
+        const alternarMensagem = () => {
+        if (turno) {
+            texto.textContent = "Você clicou no botão!";
+        } else {
+            texto.textContent = "Você clicou novamente!";
+        }
+        turno = !turno;  // Inverte o valor de 'turno' para alternar a mensagem
+    };
+
+    botao.addEventListener('click', alternarMensagem);*/
     </script>
 </body>
 </html>
