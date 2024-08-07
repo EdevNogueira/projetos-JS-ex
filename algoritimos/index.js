@@ -117,7 +117,7 @@ console.log(carro);
 carro.exibirInfo(); */ //EX-GPT-04 não consegui entender o que fazer para exibir um método (exibirInfo). Não sabia desse "this"
 
 //DESAFIO AVANÇADO - ARRAYS AND OBJECTS
-
+/* 
 let aluno01 = {
     nome: "Italo",
     nota1: 9,
@@ -157,4 +157,4 @@ const mediaAluno = () => {
     };
 };
 mediaAluno();
-console.log(aluno04); //ESQUEÇA TUDOOOOOOOOO
+console.log(aluno04); */ //ESQUEÇA TUDOOOOOOOOO

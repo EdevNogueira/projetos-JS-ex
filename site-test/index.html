@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site Moderno</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Meu Site Moderno!</h1>
+        <nav>
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul id="nav-menu">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+        <button id="toggle-theme">Alternar Tema</button>
+    </header>
+
+    <main>
+        <section id="about" class="about">
+            <h2>Sobre Mim</h2>
+            <p>Este site foi melhorado com um design moderno e funcionalidades interativas.</p>
+        </section>
+
+        <section class="highlights">
+            <h2>Destaques</h2>
+            <!-- Carrossel de Imagens -->
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://via.placeholder.com/800x400" alt="Projeto 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/800x400" alt="Projeto 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/800x400" alt="Projeto 3">
+                    </div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </section>
+
+        <!-- Botão para abrir modal de contato -->
+        <button id="open-modal" class="open-modal">Contato</button>
+
+        <!-- Modal de Contato -->
+        <div id="contact-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Contato</h2>
+                <form id="contact-form">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+                <p id="form-feedback" class="form-feedback"></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Meu Site Moderno</p>
+        <div class="social-media">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <div class="newsletter">
+            <p>Inscreva-se na nossa newsletter:</p>
+            <form>
+                <input type="email" placeholder="Seu email" required>
+                <button type="submit">Inscrever</button>
+            </form>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
