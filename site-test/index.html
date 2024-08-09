@@ -8,9 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Bem-vindo ao Meu Site Moderno!</h1>
-        <nav>
+    <!-- Loader de Página -->
+    <div id="page-loader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header e Navegação -->
+    <header id="main-header">
+        <h1 id="intro-typing">Bem-vindo ao Meu Site Moderno!</h1>
+        <nav id="nav">
             <div class="hamburger" id="hamburger">
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -19,6 +25,8 @@
             <ul id="nav-menu">
                 <li><a href="#home">Início</a></li>
                 <li><a href="#about">Sobre</a></li>
+                <li><a href="#highlights">Destaques</a></li>
+                <li><a href="#testimonials">Testemunhos</a></li>
                 <li><a href="#contact">Contato</a></li>
             </ul>
         </nav>
@@ -26,15 +34,23 @@
     </header>
 
     <main>
-        <section id="about" class="about">
+        <section id="about" class="about fade-in-section">
             <h2>Sobre Mim</h2>
             <p>Este site foi melhorado com um design moderno e funcionalidades interativas.</p>
         </section>
 
-        <section class="highlights">
+        <section id="highlights" class="highlights fade-in-section">
             <h2>Destaques</h2>
-            <!-- Carrossel de Imagens -->
-            <div class="carousel">
+            <!-- Sistema de Avaliação com Estrelas -->
+            <div class="rating">
+                <span class="star" data-value="5">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="1">&#9733;</span>
+            </div>
+            <!-- Carrossel de Imagens com Parallax -->
+            <div id="parallax-carousel" class="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="https://via.placeholder.com/800x400" alt="Projeto 1">
@@ -48,6 +64,30 @@
                 </div>
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <div class="indicators">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+            </div>
+        </section>
+
+        <!-- Nova Seção de Testemunhos -->
+        <section id="testimonials" class="testimonials fade-in-section">
+            <h2>O que estão dizendo</h2>
+            <div class="testimonial-carousel">
+                <div class="testimonial active">
+                    <p>"Este site é incrivelmente funcional e bonito! Foi uma ótima experiência navegar por ele."</p>
+                    <h3>- Cliente Satisfeito</h3>
+                </div>
+                <div class="testimonial">
+                    <p>"Adorei o design e as funcionalidades. Tudo flui muito bem e é intuitivo."</p>
+                    <h3>- Outro Cliente Satisfeito</h3>
+                </div>
+                <div class="testimonial">
+                    <p>"A integração do site com o meu negócio foi perfeita. Recomendo fortemente!"</p>
+                    <h3>- Mais um Cliente Satisfeito</h3>
+                </div>
             </div>
         </section>
 
@@ -66,6 +106,9 @@
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
 
+                    <label for="phone">Telefone:</label>
+                    <input type="text" id="phone" name="phone">
+
                     <label for="message">Mensagem:</label>
                     <textarea id="message" name="message" rows="4" required></textarea>
 
@@ -74,7 +117,23 @@
                 <p id="form-feedback" class="form-feedback"></p>
             </div>
         </div>
+        <!-- Lightbox de Imagem -->
+        <div id="lightbox" class="lightbox">
+            <span class="close-lightbox">&times;</span>
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="">
+                <p id="lightbox-caption"></p>
+            </div>
+            <a class="prev-lightbox" onclick="changeLightboxSlide(-1)">&#10094;</a>
+            <a class="next-lightbox" onclick="changeLightboxSlide(1)">&#10095;</a>
+        </div>
     </main>
+
+    <!-- Botão "Voltar ao Topo" -->
+    <button onclick="topFunction()" id="back-to-top" title="Voltar ao Topo"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- Botão de Chat Flutuante -->
+    <button id="chat-button" title="Chat"><i class="fas fa-comments"></i></button>
 
     <footer>
         <p>&copy; 2024 Meu Site Moderno</p>
@@ -92,6 +151,9 @@
             </form>
         </div>
     </footer>
+
+    <!-- Indicador de Progresso de Scroll -->
+    <div id="scroll-progress"></div>
 
     <script src="script.js"></script>
 </body>
